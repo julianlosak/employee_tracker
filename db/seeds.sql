@@ -6,7 +6,7 @@ VALUES ("Marketing"),
 
 INSERT INTO role (title, salary, department_id)
 VALUES ("Project Manager", 75000, 1),
-        ("Project Cordinator", 70000, 1)
+        ("Project Cordinator", 70000, 1),
         ("HR Manager", 60000, 2),
         ( "Receptionist", 50000,2),
         ( "Sales Manager", 120000, 3),
