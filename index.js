@@ -91,48 +91,48 @@ function mainMenu() {
 }
 
 function viewAllDepartments() {
-    const query = 'SELECT id, name FROM department';
-  
-    connection.query(query, (err, results) => {
+  const query = 'SELECT id, name FROM department';
+
+  connection.query(query, (err, results) => {
       if (err) {
-        console.error('Error:', err);
-        return;
+          console.error('Error:', err);
+          return;
       }
       console.log('List of Departments:');
       console.table(results);
-      
+
       mainMenu();
-    });
-  }  
+  });
+} 
 
 function viewAllRoles() {
-    const query = 'SELECT id, name FROM roles';
-  
-    connection.query(query, (err, results) => {
+  const query = 'SELECT id, title, salary, department_id FROM role';
+
+  connection.query(query, (err, results) => {
       if (err) {
-        console.error('Error:', err);
-        return;
+          console.error('Error:', err);
+          return;
       }
       console.log('List of Roles:');
       console.table(results);
-      
+
       mainMenu();
-    });
+  });
 }
 
 function viewAllEmployees() {
-    const query = 'SELECT id, name FROM employees';
-  
-    connection.query(query, (err, results) => {
+  const query = 'SELECT id, first_name, last_name, role_id, manager_id FROM employee';
+
+  connection.query(query, (err, results) => {
       if (err) {
-        console.error('Error:', err);
-        return;
+          console.error('Error:', err);
+          return;
       }
-      console.log('List of employees:');
+      console.log('List of Employees:');
       console.table(results);
-      
+
       mainMenu();
-    });
+  });
 }
 
 function addDepartment() {
